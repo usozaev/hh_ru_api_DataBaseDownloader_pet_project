@@ -49,7 +49,7 @@ namespace hhru_Net_project
         {
             using var cmd = _connection.CreateCommand();
             cmd.CommandText = @"
-                INSERT INTO myDB1 (Vacancy, Company, Salary)
+                INSERT OR IGNORE INTO myDB1 (Vacancy, Company, Salary)
                 VALUES ($vacancy, $company, $salary);";
 
             var pVacancy = cmd.Parameters.Add("$vacancy", SqliteType.Text);

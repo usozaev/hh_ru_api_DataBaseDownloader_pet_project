@@ -19,6 +19,7 @@ public class Salary : ISalary
 
 public class HhVacancy : IVacancy
 {
+    public string Id { get; set; }
     public string Name { get; set; }
     public Employer Employer { get; set; }
     public string AlternateUrl { get; set; }
